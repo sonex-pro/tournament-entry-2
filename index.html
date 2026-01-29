@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BATTS Senior 1-Star Tournament April 26th 2026 Entry Form</title>
+  <title>BATTS Senior 1-Star Tournament SundayApril 19th 2026 Entry Form</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Stripe JS -->
   <script src="https://js.stripe.com/v3/"></script>
@@ -52,7 +52,7 @@
   <div id="success-message" style="display: none; background-color: #4CAF50; color: white; text-align: center; padding: 20px; margin: 20px auto; max-width: 800px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">Your entry has been successfully submitted! To secure your place in the Batts 1-Star tournament, please complete the bank transfer. Thank you, and good luck!</div>
   
   <div class="form-container">
-    <h1 style="color: #FFFFFF;">BATTS Senior Open 1-Star Tournament<br>Date Pending Approval<br>Sponsored by Bribar</h1>
+    <h1 style="color: #FFFFFF;">BATTS Senior Open 1-Star Tournament<br>Sunday 19th April 2026<br>Sponsored by Bribar</h1>
 
     <form id="entryForm">
       <!-- Section 1: Info -->
@@ -70,8 +70,8 @@
           <div style="border-top: 1px solid #deecde; margin: 16px 0;"></div>
           <ul>
             <li>The tournament is approved by TTE and Essex County TTA</li>
-            <li>Tournament date: Sunday 26th April 2026</li>
-            <li>Entry closing date: Wednesday 23rd April at 10pm</li>
+            <li>Tournament date: Sunday 19th April 2026</li>
+            <li>Entry closing date: Wednesday 15th April at 10pm</li>
             <li>Venue: BATTS TT Club, Norman Booth Centre, Elderfield, Mulberry Green, Old Harlow, Essex CM17 0EY</li>
             <li>Referee: Neil Brierley (TO2 qualification)</li>
             <li>Organiser: Carl Johnson (BATTS communications manager)  Tel: 07469 844024, Email: <a href="mailto:carl.johnson.batts@gmail.com">carl.johnson.batts@gmail.com</a></li>
@@ -87,7 +87,7 @@
           <p>£33.00</p>
           <p>Maximum 36 entries accepted in order of receipt and payment</p>
           <p>The tournament runs all day (approx. 9:15am to 5:30pm), players must be available for morning and afternoon sessions, venue opens at 8:15am for registration & practice (play starts 9:20am)</p>
-          <p>Under 18s must be accompanied by an adult, the draw will be made on 24th April but not published in advance</p>
+          <p>Under 18s must be accompanied by an adult, the draw will be made on 17th April but not published in advance</p>
           <p>Refreshments and food are available to purchase from our cafeteria using cash or card</p>
           <p>Are you new to playing in tournaments? If so, here is a link to the Table Tennis England website where you can find lots of useful information. <a href="https://www.tabletennisengland.co.uk/compete/">Start competing - Table Tennis England</a></p>
         </div>
@@ -125,7 +125,7 @@
             this event which may include (but not limited to), using them in our printed and online platforms, social
             media, press releases and funding applications. If you do not give permission to take photographs
             and/or video of you (or individuals for whom you are legally responsible), please contact: <a href="mailto:carl.johnson.batts@gmail.com">carl.johnson.batts@gmail.com</a>. Please be aware that we follow the Table Tennis England <a href="https://www.tabletennisengland.co.uk/about-us/safeguarding/photography-guidelines/">Photo and live streaming Policy</a></li>
-          <li>20. Entry closing date: Wednesday 22nd of April 2026 at 10pm. The draw will be made on Friday 24th of April 2026.</li>
+          <li>20. Entry closing date: Wednesday 15th of April 2026 at 10pm. The draw will be made on Friday 17th of April 2026.</li>
           <li>21. If it becomes necessary to restrict entries, priority will be given in order of receipt.</li>
           <li>22. In conjunction with the TTE Child Protection Policy, persons wishing to take photographs or video images must register with the event organiser, producing their professional identification, TTE authorisation or a completed TTE authorisation form.</li>
           <li>23. All competitors will be required to sign in upon their arrival, should not leave the centre without notifying the referee. Players absent when due to play are liable to be scratched from their next match. Practice will only be permitted prior to the event starting.</li>
@@ -276,7 +276,7 @@
       femaleCheckbox.addEventListener('change', () => { if (femaleCheckbox.checked) maleCheckbox.checked = false; });
 
 
-      // Initialize Stripe (LIVE MODE)
+      // Initialize Stripe Publishable Key not secret key (LIVE MODE)
       const stripe = Stripe('pk_live_51StmgXA7Kc4ghTjh5I5NACGKcCW3y5QChIgxKhnQdIbVxGTlVVR8Q43Yxa8pUd1Y6RgOWnGFLZfngp7yO5rR2PIn00uFZ3QsNa');
 
       form.addEventListener('submit', async function (event) {

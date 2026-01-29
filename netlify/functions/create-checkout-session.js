@@ -38,9 +38,13 @@ exports.handler = async (event) => {
         body: JSON.stringify({ error: 'Missing required fields' })
       };
     }
+    // TEST_MODE = true → Charges £1.00
+    // TEST_MODE = false → Charges £34.00
+    // Toggle TEST_MODE to false to charge the correct amount
 
-    // Convert price to cents for Stripe
-    const amount = Math.round(parseFloat(data.totalPrice) * 100);
+    const TEST_MODE = true; // Set to false for production
+    const CORRECT_PRICE = TEST_MODE ? 1.00 : 34.00; // £1.00 for testing, £34.00 for live
+    const amount = Math.round(CORRECT_PRICE * 100);
 
     // Create a Stripe checkout session for tournament entry
     const session = await stripe.checkout.sessions.create({
@@ -53,7 +57,7 @@ exports.handler = async (event) => {
               name: `BATTS Tournament Entry - ${data.name || 'Player'}`,
               description: `Tournament entry fee`,
             },
-            unit_amount: Math.round(parseFloat(data.totalPrice) * 100), // Convert to cents/pence
+            unit_amount: amount, // Use server-side validated amount
           },
           quantity: 1,
         }
