@@ -63,8 +63,8 @@ exports.handler = async (event) => {
         }
       ],
       mode: 'payment',
-      success_url: `${process.env.Site_URL}/index.html?payment_success=true&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.Site_URL}/index.html?payment_canceled=true`,
+      success_url: `${process.env.Site_URL || 'https://tournament-entry.netlify.app'}/index.html?payment_success=true&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.Site_URL || 'https://tournament-entry.netlify.app'}/index.html?payment_canceled=true`,
       metadata: {
         name: data.name || '',
         email: data.email || '',

@@ -277,6 +277,13 @@
       const urlParams = new URLSearchParams(window.location.search);
       const paymentSuccess = urlParams.get('payment_success');
       const sessionId = urlParams.get('session_id');
+      
+      // Debug: Log URL parameters
+      console.log('URL params:', {
+        url: window.location.search,
+        paymentSuccess: paymentSuccess,
+        sessionId: sessionId
+      });
 
       if (paymentSuccess === 'true') {
         // Show success message and hide form

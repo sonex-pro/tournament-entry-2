@@ -28,6 +28,7 @@ exports.handler = async (event) => {
 
     // Handle the checkout.session.completed event
     if (stripeEvent.type === 'checkout.session.completed') {
+      console.log('Webhook received: checkout.session.completed');
       const session = stripeEvent.data.object;
 
       // Extract metadata from the session for tournament entry
