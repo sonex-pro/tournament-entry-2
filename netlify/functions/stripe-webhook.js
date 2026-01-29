@@ -61,7 +61,7 @@ exports.handler = async (event) => {
         paymentStatus: 'Paid',
         paymentDate: new Date().toISOString(),
         sessionId: session.id,
-        apiKey: process.env.GOOGLE_APPS_SCRIPT_API_KEY
+        apiKey: process.env.GOOGLE_APPS_SCRIPT_API_KEY || "3yN3icjfxQ2b3KP0eJ3XoeDGwU4nFj2hd2B+c7ijWg8="
       };
 
       // Log the tournament data in Netlify logs

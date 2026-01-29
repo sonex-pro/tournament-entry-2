@@ -270,11 +270,52 @@
       const femaleCheckbox = document.getElementById('gender-female');
       const form = document.getElementById('entryForm');
       const submitBtn = document.getElementById('submitBtn');
+      const successMessage = document.getElementById('success-message');
+      const formContainer = document.querySelector('.form-container');
+
+      // Check for payment success in URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const paymentSuccess = urlParams.get('payment_success');
+      const sessionId = urlParams.get('session_id');
+
+      if (paymentSuccess === 'true') {
+        // Show success message and hide form
+        successMessage.style.display = 'block';
+        successMessage.innerHTML = `
+          <h2 style="margin: 0 0 10px 0;">🎉 Payment Successful!</h2>
+          <p style="margin: 5px 0;">Your tournament entry has been successfully submitted and paid for.</p>
+          <p style="margin: 5px 0;">You will receive a confirmation email shortly.</p>
+          <p style="margin: 5px 0; font-size: 14px;">Session ID: ${sessionId || 'N/A'}</p>
+          <p style="margin: 10px 0 0 0; font-weight: bold;">Thank you for entering the BATTS Senior 1-Star Tournament!</p>
+        `;
+        
+        // Hide the form
+        if (formContainer) {
+          formContainer.style.display = 'none';
+        }
+        
+        // Scroll to top to show success message
+        window.scrollTo(0, 0);
+        
+        // Clean up URL parameters without page reload
+        const cleanUrl = window.location.origin + window.location.pathname;
+        window.history.replaceState({}, document.title, cleanUrl);
+        
+        return; // Don't set up form handlers if payment was successful
+      }
+
+      // Check for payment cancellation
+      const paymentCanceled = urlParams.get('payment_canceled');
+      if (paymentCanceled === 'true') {
+        alert('Payment was canceled. You can try again when ready.');
+        // Clean up URL parameters
+        const cleanUrl = window.location.origin + window.location.pathname;
+        window.history.replaceState({}, document.title, cleanUrl);
+      }
 
       // Ensure only one gender checkbox can be selected
       maleCheckbox.addEventListener('change', () => { if (maleCheckbox.checked) femaleCheckbox.checked = false; });
       femaleCheckbox.addEventListener('change', () => { if (femaleCheckbox.checked) maleCheckbox.checked = false; });
-
 
       // Initialize Stripe Publishable Key not secret key (LIVE MODE)
       const stripe = Stripe('pk_live_51StmgXA7Kc4ghTjh5I5NACGKcCW3y5QChIgxKhnQdIbVxGTlVVR8Q43Yxa8pUd1Y6RgOWnGFLZfngp7yO5rR2PIn00uFZ3QsNa');
