@@ -276,8 +276,8 @@
       femaleCheckbox.addEventListener('change', () => { if (femaleCheckbox.checked) maleCheckbox.checked = false; });
 
 
-      // Initialize Stripe
-      const stripe = Stripe('pk_test_51StmgXA7Kc4ghTjhS7WWE0AbSk8v256DI18jRIeejEPEciQehSSceKY2LwiKsbpVUNPlsozJx1bVWkhUndG52xlz007G0MYLag');
+      // Initialize Stripe (LIVE MODE)
+      const stripe = Stripe('pk_live_51StmgXA7Kc4ghTjh5I5NACGKcCW3y5QChIgxKhnQdIbVxGTlVVR8Q43Yxa8pUd1Y6RgOWnGFLZfngp7yO5rR2PIn00uFZ3QsNa');
 
       form.addEventListener('submit', async function (event) {
         event.preventDefault();

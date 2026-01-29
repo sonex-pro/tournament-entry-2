@@ -65,7 +65,6 @@ temp/
 
 # API keys and sensitive data (if accidentally committed)
 **/google-apps-script.js
-**/secure-api.js
 
 # Backup files
 *.bak
