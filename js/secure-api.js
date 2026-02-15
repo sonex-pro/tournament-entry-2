@@ -4,7 +4,7 @@
  */
 
 // Base URL for Netlify functions
-const API_BASE_URL = 'https://tournament2.netlify.app/.netlify/functions';
+const API_BASE_URL = '/.netlify/functions';
 
 /**
  * Create a secure tournament entry and Stripe checkout session
