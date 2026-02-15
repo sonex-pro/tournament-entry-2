@@ -4,7 +4,7 @@ const axios = require('axios');
 exports.handler = async (event) => {
   // Set CORS headers for all responses
   const headers = {
-    'Access-Control-Allow-Origin': '*', // Allow all origins
+    'Access-Control-Allow-Origin': 'https://batts-events-2.co.uk', // Allow GitHub Pages domain
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Allow-Methods': 'POST, OPTIONS'
   };
