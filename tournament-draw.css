@@ -25,7 +25,7 @@ body {
   text-align: center;
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #deecde;
+  border-bottom: 2px solid #7c87df;
 }
 
 .draw-header h1 {
@@ -60,7 +60,6 @@ body {
 
 .notice-text {
   font-size: 1rem;
-  color: #856404;
   font-weight: 500;
   margin: 0;
 }
