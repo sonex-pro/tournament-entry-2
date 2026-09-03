@@ -38,12 +38,12 @@ exports.handler = async (event) => {
         body: JSON.stringify({ error: 'Missing required fields' })
       };
     }
-    // TEST_MODE = true → Charges £1.00
-    // TEST_MODE = false → Charges £34.00
+    // TEST_MODE = true → Charges £0.50
+    // TEST_MODE = false → Charges £21.00
     // Toggle TEST_MODE to false to charge the correct amount
 
-    const TEST_MODE = false;
-    const CORRECT_PRICE = TEST_MODE ? 1.00 : 34.00; // £1.00 for testing, £34.00 for live
+    const TEST_MODE = true;
+    const CORRECT_PRICE = TEST_MODE ? 0.50 : 21.00; // £0.50 for testing, £21.00 for live
     const amount = Math.round(CORRECT_PRICE * 100);
 
     // Create a Stripe checkout session for tournament entry
