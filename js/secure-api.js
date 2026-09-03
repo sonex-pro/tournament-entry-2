@@ -24,17 +24,10 @@ async function createSecureTournamentEntry(entryData) {
       county: entryData.county || 'Not specified',
       dob: entryData.dob || 'Not specified',
       disability: entryData.disability || '',
-      'not tte aff': entryData['not tte aff'] || '',
       'player-name-print': entryData['player-name-print'] || '',
       'undertaking-date': entryData['undertaking-date'] || '',
       'data-protection-name': entryData['data-protection-name'] || '',
       'data-protection-date': entryData['data-protection-date'] || '',
-      'guardian-name': entryData['guardian-name'] || '',
-      'guardian-relation': entryData['guardian-relation'] || '',
-      'guardian-date': entryData['guardian-date'] || '',
-      'anti-doping-name': entryData['anti-doping-name'] || '',
-      'anti-doping-relation': entryData['anti-doping-relation'] || '',
-      'anti-doping-date': entryData['anti-doping-date'] || '',
       totalPrice: '34.00' // Fixed tournament entry fee (£33 + £1 booking fee)
     };
     

@@ -147,7 +147,7 @@ form input[type="checkbox"] {
 --------------------------- */
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   h2 {
     font-size: 1.1rem;
@@ -198,34 +198,6 @@ form input[type="checkbox"] {
 }
 
 .data-protection-section label.required {
-  margin-bottom: 10px;
-  display: block;
-}
-
-/* Guardian Consent section styling */
-.guardian-consent-section {
-  border: 2px solid #f3e28c;
-  border-radius: 8px;
-  padding: 15px;
-  margin: 20px 0;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.guardian-consent-section label.required {
-  margin-bottom: 10px;
-  display: block;
-}
-
-/* Anti-Doping section styling */
-.anti-doping-section {
-  border: 2px solid #f3e28c;
-  border-radius: 8px;
-  padding: 15px;
-  margin: 20px 0;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.anti-doping-section label.required {
   margin-bottom: 10px;
   display: block;
 }

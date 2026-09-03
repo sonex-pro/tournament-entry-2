@@ -75,17 +75,10 @@ exports.handler = async (event) => {
         county: data.county || '',
         dob: data.dob || '',
         disability: data.disability || '',
-        nationalAssociation: data['not tte aff'] || '',
         playerNamePrint: data['player-name-print'] || '',
         undertakingDate: data['undertaking-date'] || '',
         dataProtectionName: data['data-protection-name'] || '',
-        dataProtectionDate: data['data-protection-date'] || '',
-        guardianName: data['guardian-name'] || '',
-        guardianRelation: data['guardian-relation'] || '',
-        guardianDate: data['guardian-date'] || '',
-        antiDopingName: data['anti-doping-name'] || '',
-        antiDopingRelation: data['anti-doping-relation'] || '',
-        antiDopingDate: data['anti-doping-date'] || ''
+        dataProtectionDate: data['data-protection-date'] || ''
       }
     });
 
