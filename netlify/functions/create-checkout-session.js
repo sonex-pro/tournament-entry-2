@@ -42,7 +42,7 @@ exports.handler = async (event) => {
     // TEST_MODE = false → Charges £21.00
     // Toggle TEST_MODE to false to charge the correct amount
 
-    const TEST_MODE = true;
+    const TEST_MODE = false;
     const CORRECT_PRICE = TEST_MODE ? 0.50 : 21.00; // £0.50 for testing, £21.00 for live
     const amount = Math.round(CORRECT_PRICE * 100);
 
