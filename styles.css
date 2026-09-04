@@ -145,6 +145,19 @@ form input[type="checkbox"] {
 /* ---------------------------
    Media queries (mobile first)
 --------------------------- */
+/* Honor Phone Portrait */
+@media (max-width: 367px) {
+    /* Styles for small devices like Honor Phone Portrait */
+    h1 {
+        font-size: 1.1rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    .form-container {
+        padding: 10px 12px;
+    }
+}
 @media (max-width: 768px) {
   h1 {
     font-size: 1.5rem;
